@@ -8,14 +8,14 @@ const data = [
   { x: 6, y: 9 }
 ];
 
-const [domainMin, domainMax] = d3.extent(data.map(_ => _.x));
-const [rangeMin, rangeMax] = d3.extent(data.map(_ => _.y));
+const [xMin, xMax] = d3.extent(data.map(_ => _.x));
+const [yMin, yMax] = d3.extent(data.map(_ => _.y));
 
 document.getElementById("app").innerHTML = `
 <pre>
-Domain Min: ${domainMin}
-Domain Max: ${domainMax}
-Range Min: ${rangeMin}
-Range Max: ${rangeMax}
+X Min: ${xMin}
+X Max: ${xMax}
+Y Min: ${yMin}
+Y Max: ${yMax}
 </pre>
 `;
